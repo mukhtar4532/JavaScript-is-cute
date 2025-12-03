@@ -9,20 +9,23 @@ const userDetails = {
   name: "sayyDev",
   age: 22,
   designation: "Frontend developer",
-  //   sum: function () {
-  //     console.log(5 + 6);
-  //   },
-  //   printDetails: function () {
-  //     // this.sum();
-  //     console.log(this);
-  //   },
+  // sum: function () {
+  //   console.log(5 + 6);
+  // },
+  // printDetails: function () {
+  //   // this.sum();
+  //   console.log(this);
+  // },
 };
 
 //                  we also access the generic function for the different objects by using call function
 
 let printDetails = function (city, country) {
+  userDetails["city"] = city;
+  userDetails["country"] = country;
   //   console.log(arr);
   console.log(this.name + " " + city + " " + country);
+  console.log(userDetails);
 };
 
 // userDetails.printDetails();
@@ -59,7 +62,7 @@ const userDetails2 = {
 //                  in bind function printdetails function call only one time and store the value of it in newfun now you can use newfun multiple time on single call
 
 // printDetails.bind(userDetails, "Delhi", "India")
-const newfun = printDetails.bind(userDetails2, "Mumbai", "India");
+// const newfun = printDetails.bind(userDetails2, "Mumbai", "India");
 // console.log(newfun);
 
-newfun();
+// newfun();
